@@ -1,0 +1,83 @@
+.navbarSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+
+  .navbarLogo {
+
+  }
+
+  .navbarSearch {
+    cursor: pointer;
+  }
+
+  .navbarBurger {
+    gap: 18px;
+    cursor: pointer;
+    display: flex;
+  }
+}
+
+.hamburger {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 19px;
+  cursor: pointer;
+
+  div {
+    align-self: flex-end;
+    height: 2px;
+    width: 100%;
+    background: #333;
+  }
+
+  .meat {
+    width: 75%;
+    transition: all 200ms ease-in-out;
+  }
+
+  .bottomBun {
+    width: 50%;
+    transition: all 400ms ease-in-out;
+  }
+
+  &:hover {
+    div {
+      width: 100%
+    }
+
+    .topBun {
+      animation: burger-hover 1s infinite ease-in-out alternate;
+    }
+
+    .meat {
+      animation: burger-hover 1s infinite ease-in-out alternate forwards 200ms
+    }
+
+    .bottomBun {
+      animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms
+    }
+
+    @keyframes burger-hover {
+      0% {
+        width: 100%
+      }
+      50% {
+        width: 50%
+      }
+      100% {
+        width: 100%
+      }
+    }
+  }
+}
+
+.ant-drawer-body{
+  text-align: center;
+}
+

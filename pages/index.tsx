@@ -1,14 +1,12 @@
-import Head from "next/head";
-import Link from "next/link";
-import Script from "next/script";
+import Navbar from "../component/Navbar";
+import 'antd/dist/antd.css';
+import styles from "../component/Navbar/index.module.scss";
+import React from "react";
 
 export default function Home() {
   return (
     <div className='container mx-auto'>
-      <h1 className="title">
-        Read <Link
-          href="/posts/first-post">this page!</Link>
-      </h1>
+      <Navbar/>
     </div>
   );
 }
